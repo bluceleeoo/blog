@@ -6,6 +6,7 @@ use App\Http\Model\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends CommonController{
     //get.admin/category全部分类列表
@@ -48,8 +49,25 @@ class CategoryController extends CommonController{
     }
     //post.admin/category添加分类提交地址
     public function store(){
-        $input=Input::all();
+        $input=Input::except('_token');
         dd($input);
+        //验证规则
+        $rules=[
+            'cate_name'=>'required',
+        ];
+        $message=[
+            'cate_name.required'=>'分类名称不能为空！',
+        ];
+
+        $validator=Validator::make($input,$rules,$message);
+        if($validator->passes()){
+            $re = Category::create('');
+            dd($re);
+        }else{
+            // echo 'no';
+            //dd($validator->errors()->all());
+            return back()->withErrors($validator);
+        }
     }
     //get.admin/category/{category}显示单个分类信息
     public function show(){
