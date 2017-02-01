@@ -50,7 +50,7 @@ class CategoryController extends CommonController{
     //post.admin/category添加分类提交地址
     public function store(){
         $input=Input::except('_token');
-        dd($input);
+        //dd($input);
         //验证规则
         $rules=[
             'cate_name'=>'required',
@@ -61,8 +61,13 @@ class CategoryController extends CommonController{
 
         $validator=Validator::make($input,$rules,$message);
         if($validator->passes()){
-            $re = Category::create('');
-            dd($re);
+            $re = Category::create($input);
+            //dd($re);
+            if($re){
+                return redirect('admin/category');
+            }else{
+            return back()->with('errors','数据填充失败，请稍后重试！');
+            }
         }else{
             // echo 'no';
             //dd($validator->errors()->all());

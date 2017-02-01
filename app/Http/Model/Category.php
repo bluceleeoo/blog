@@ -9,6 +9,7 @@ class Category extends Model
     protected $table='category';
     protected $pk='cate_id';
     public $timestamp=false;
+    protected $guarded=[];//排除不能填充的字段
     public function tree(){
         $categorys=$this->all();
        return $this->getTree($categorys,'cate_name','cate_id','cate_pid');
