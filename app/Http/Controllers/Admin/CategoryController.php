@@ -40,14 +40,16 @@ class CategoryController extends CommonController{
         return $data;
     }
 
-    //post.admin/category
-    public function store(){
-
-    }
     //get.admin/category/create添加分类
     public function create(){
         //echo '添加分类';
-        return view('admin/category/add');
+        $data=Category::where('cate_pid',0)->get();
+        return view('admin/category/add',compact('data'));
+    }
+    //post.admin/category添加分类提交地址
+    public function store(){
+        $input=Input::all();
+        dd($input);
     }
     //get.admin/category/{category}显示单个分类信息
     public function show(){

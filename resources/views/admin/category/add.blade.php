@@ -23,16 +23,18 @@
 <!--结果集标题与导航组件 结束-->
 
 <div class="result_wrap">
-    <form action="#" method="post">
+    <form action="{{url('admin/category')}}" method="post">
+        {{csrf_field()}}
         <table class="add_tab">
             <tbody>
             <tr>
                 <th width="120"><i class="require">*</i>父级分类：</th>
                 <td>
                     <select name="cate_pid">
-                        <option value="">==请选择==</option>
-                        <option value="19">精品界面</option>
-                        <option value="20">推荐界面</option>
+                        <option value="0">==顶级分类==</option>
+                        @foreach($data as $d)
+                        <option value="{{$d->cate_id}}">{{$d->cate_name}}</option>
+                        @endforeach
                     </select>
                 </td>
             </tr>
