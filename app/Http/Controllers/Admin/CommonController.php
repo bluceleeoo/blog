@@ -11,7 +11,16 @@ class CommonController extends Controller
 {
     //图片上传
     public function upload(){
-        $input=Input::all();
-        dd($input);
+        $file=Input::file('Filedata');
+       // dd($file);
+        if($file->isValid()){
+            $extension=$file->getClientOriginalExtension();//上传文件后缀
+            $newName=date('YmdHis').mt_rand(100,999).'.'.$extension;//新文件名
+
+            $path=$file->move(base_path().'/uploads',$newName);
+//            echo $path;
+           $filePath= 'uploads/'.$newName;
+            return $filePath;
+;        }
     }
 }
