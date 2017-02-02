@@ -66,7 +66,7 @@
                     <td>{{$v->cate_view}}</td>
                     <td>
                         <a href="{{url('admin/category/'.$v->cate_id.'/edit')}}">修改</a>
-                        <a href="#">删除</a>
+                        <a href="javascript:;" onclick="delCate()">删除</a>
                     </td>
                 </tr>
                 @endforeach()
@@ -113,10 +113,16 @@
        //alert(123);
         var cate_order = $(obj).val();
         $.post("{{url('admin/cate/changeorder')}}",{'_token':'{{csrf_token()}}','cate_id':cate_id,'cate_order':cate_order},function(data){
-
+            alert(data.msg)
+//            if(data.status == 0){
+//                layer.msg(data.msg,{icon:6});
+//            }else{
+//                layer.msg(data.msg,{icon:5});
+//            }
         });
     }
     //删除分类
+function delCate(){
     //询问框
     layer.confirm('您是如何看待前端开发的？',{
         btn:['','']
@@ -128,5 +134,7 @@
             btn:['明白了','']
         });
     });
+}
+
 </script>
 @endsection()

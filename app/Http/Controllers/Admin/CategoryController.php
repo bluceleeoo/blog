@@ -21,13 +21,13 @@ class CategoryController extends CommonController{
         //echo 123;
         $input=Input::all();
         //echo $input['cate_order'];?没有结果，报500错误
-        $cate=Category::find($input['cate_id']);
+        $cate = Category::find($input['cate_id']);
         $cate->cate_order=$input['cate_order'];
         $re=$cate->update();
         //echo $re;
         if($re){
             $data=[
-                'status'=>0,
+                'status'=> 0,
                 'msg'=>'分类排序更新成功',
             ];
         }else{
