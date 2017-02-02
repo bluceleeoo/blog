@@ -46,4 +46,6 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::resource('links','LinksController');
     Route::post('links/changeorder','LinksController@changeOrder');
     Route::any('upload','CommonController@upload');
+    Route::resource('navs','NavsController');
+    Route::post('navs/changeorder','NavsController@changeOrder');
 });
