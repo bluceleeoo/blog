@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     protected $table='category';
-    protected $pk='cate_id';
+    protected $primaryKey='cate_id';
     public $timestamp=false;
     protected $guarded=[];//排除不能填充的字段
     public function tree(){

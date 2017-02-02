@@ -72,8 +72,11 @@ class CategoryController extends CommonController{
         }
     }
     //get.admin/category/{category}/edit编辑分类
-    public function edit(){
-
+    public function edit($cate_id){
+        //echo $cate_id;
+        $field=Category::find($cate_id);
+       // dd($field);
+        return view('admin.category.edit',compact('field'));
     }
     //put.admin/category/{category}更新分类
     public function update(){
