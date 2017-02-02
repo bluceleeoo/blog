@@ -80,8 +80,14 @@ class CategoryController extends CommonController{
         return view('admin.category.edit',compact('field','data'));
     }
     //put.admin/category/{category}更新分类
-    public function update(){
-
+    public function update($cate_id){
+       $input=Input::except('_token','_method');
+        $re=Category::where('cate_id',$cate_id)->update($input);
+        if($re){
+            return redirect('admin/category');
+        }else{
+            return back()->with('errors','分类更新失败，请稍后重试！');
+        }
     }
 
     //get.admin/category/{category}显示单个分类信息
