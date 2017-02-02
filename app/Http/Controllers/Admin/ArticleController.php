@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Validator;
 class ArticleController extends CommonController
 {//get.admin/article全部文章列表
     public function index(){
-        echo '全部文章列表';
+        $data =Article::orderBy('art_id','desc')->paginate(10);
+        //dd($data->links());
+       return view('admin.article.index',compact('data'));
     }
     //get.admin/article/create添加分文章
     public function create(){
@@ -46,4 +48,5 @@ class ArticleController extends CommonController
             return back()->withErrors($validator);
         }
     }
+
 }
