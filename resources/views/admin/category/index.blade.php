@@ -116,5 +116,17 @@
 
         });
     }
+    //删除分类
+    //询问框
+    layer.confirm('您是如何看待前端开发的？',{
+        btn:['','']
+    },function(){
+        layer.msg('',{icon:1});
+    },function(){
+        layer.msg('也可以这样',{
+            time:2000,
+            btn:['明白了','']
+        });
+    });
 </script>
 @endsection()
