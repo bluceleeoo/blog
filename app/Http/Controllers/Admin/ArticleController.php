@@ -48,5 +48,22 @@ class ArticleController extends CommonController
             return back()->withErrors($validator);
         }
     }
+    //get.admin/article/{article}/edit编辑分类
+    public function edit($art_id){
+        $data =(new Category())->tree();
+        $field=Article::find($art_id);
+        //dd($field);
+        return view('admin.article.edit',compact('field','data'));
+    }
+    //put.admin/category/{category}更新分类
+    public function update($art_id){
+        $input=Input::except('_token','_method');
+        $re=Article::where('art_id',$art_id)->update($input);
+        if($re){
+            return redirect('admin/article');
+        }else{
+            return back()->with('errors','文章更新失败，请稍后重试！');
+        }
+    }
 
 }
