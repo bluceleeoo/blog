@@ -76,7 +76,11 @@
                                     '_token'     : "{{csrf_token()}}"
                                 },
                                 'swf'      : "{{asset('resources/org/uploadify/uploadify.swf')}}",
-                                'uploader' : "{{url('admin/upload')}}"
+                                'uploader' : "{{url('admin/upload')}}",
+                                'onUploadSuccess':function(file,data,response){
+                                    $('input[name=art_thumb]').val(data);
+                                    $('#art_thumb_img').attr('src','/'+data);
+                                }
                             });
                         });
                     </script>
@@ -85,6 +89,12 @@
                         .uploadify-button{border:none; border-radius:5px; margin-top:8px;}
                         table.add_tab tr td span.uploadify-button-text{color: #FFF; margin:0;}
                     </style>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <img src="" id="art_thumb_img" style="max-width: 350px;max-height:100px">
                 </td>
             </tr>
             <tr>
