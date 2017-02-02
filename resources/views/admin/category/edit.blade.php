@@ -44,7 +44,8 @@
                     <select name="cate_pid">
                         <option value="0">==顶级分类==</option>
                         @foreach($data as $d)
-                        <option value="{{$d->cate_id}}">{{$d->cate_name}}</option>
+                        <option value="{{$d->cate_id}}" @if($d->cate_id==$field->cate_pid) selected @endif>{{$d->cate_name}}</option>
+
                         @endforeach
                     </select>
                 </td>
@@ -52,32 +53,32 @@
             <tr>
                 <th><i class="require">*</i>分类名称：</th>
                 <td>
-                    <input type="text" name="cate_name">
+                    <input type="text" name="cate_name" value="{{$field->cate_name}}">
                     <span><i class="fa fa-exclamation-circle yellow"></i>分类名称必须填写</span>
                 </td>
             </tr>
             <tr>
                 <th>分类标题：</th>
                 <td>
-                    <input type="text" class="lg" name="cate_title">
+                    <input type="text" class="lg" name="cate_title" value="{{$field->cate_title}}">
                 </td>
             </tr>
             <tr>
                 <th>关键词：</th>
                 <td>
-                    <textarea name="cate_keywords"></textarea>
+                    <textarea name="cate_keywords" >{{$field->cate_keywords}}</textarea>
                 </td>
             </tr>
             <tr>
                 <th>描述:</th>
                 <td>
-                    <textarea name="cate_description" ></textarea>
+                    <textarea name="cate_description" >{{$field->cate_description}}</textarea>
                 </td>
             </tr>
             <tr>
                 <th><i class="require">*</i>排序：</th>
                 <td>
-                    <input type="text" class="sm" name="cate_order">
+                    <input type="text" class="sm" name="cate_order" value="{{$field->cate_order}}">
                 </td>
             </tr>
 
