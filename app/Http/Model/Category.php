@@ -11,7 +11,7 @@ class Category extends Model
     public $timestamp=false;
     protected $guarded=[];//排除不能填充的字段
     public function tree(){
-        $categorys=$this->all();
+        $categorys=$this->orderBy('cate_order','asc')->get();
        return $this->getTree($categorys,'cate_name','cate_id','cate_pid');
     }
     public function getTree($data,$field_name,$field_id='id',$field_pid='pid',$pid=0){

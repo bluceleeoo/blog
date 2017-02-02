@@ -66,7 +66,7 @@
                     <td>{{$v->cate_view}}</td>
                     <td>
                         <a href="{{url('admin/category/'.$v->cate_id.'/edit')}}">修改</a>
-                        <a href="javascript:;" onclick="delCate()">删除</a>
+                        <a href="javascript:;" onclick="delCate({{$v->cate_id}})">删除</a>
                     </td>
                 </tr>
                 @endforeach()
@@ -113,26 +113,32 @@
        //alert(123);
         var cate_order = $(obj).val();
         $.post("{{url('admin/cate/changeorder')}}",{'_token':'{{csrf_token()}}','cate_id':cate_id,'cate_order':cate_order},function(data){
-            alert(data.msg)
-//            if(data.status == 0){
-//                layer.msg(data.msg,{icon:6});
-//            }else{
-//                layer.msg(data.msg,{icon:5});
-//            }
+            //layer.msg(data.msg,{icon:6});
+            if(data.status == 0){
+                layer.msg(data.msg,{icon:6});
+            }else{
+                layer.msg(data.msg,{icon:5});
+            }
         });
     }
     //删除分类
-function delCate(){
+function delCate(cate_id){
     //询问框
-    layer.confirm('您是如何看待前端开发的？',{
-        btn:['','']
+    layer.confirm('您确定要删除这个分类吗？',{
+        btn:['确定','取消']
     },function(){
-        layer.msg('',{icon:1});
-    },function(){
-        layer.msg('也可以这样',{
-            time:2000,
-            btn:['明白了','']
+        $.post("{{url('admin/category/')}}/"+cate_id,{'_method':'delete','_token':"{{csrf_token()}}"},function(data){
+        if(data.status== 0){
+            location.href=location.href;
+            layer.msg(data.msg,{icon:6});
+        }else{
+            layer.msg(data.msg,{icon:5});
+        }
         });
+        alert(cate_id);
+        //layer.msg('',{icon:1});
+    },function(){
+
     });
 }
 

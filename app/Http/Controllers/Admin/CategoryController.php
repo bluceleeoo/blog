@@ -59,7 +59,7 @@ class CategoryController extends CommonController{
         $validator=Validator::make($input,$rules,$message);
         if($validator->passes()){
             $re = Category::create($input);
-            dd($re);
+            //dd($re);
             if($re){
                 return redirect('admin/category');
             }else{
@@ -95,8 +95,20 @@ class CategoryController extends CommonController{
 
     }
     //delete.admin/category/{category}删除单个分类
-    public function destroy(){
-
+    public function destroy($cate_id){
+        $re=Category::where('cate_id',$cate_id)->delete();
+        if($re){
+            $data = [
+                'status' => 0,
+                'msg' => '分类删除成功！',
+            ];
+        }else{
+            $data = [
+                'status' => 1,
+                'msg' => '分类删除失败，请稍后重试！',
+            ];
+        }
+        return $data;
     }
 
 }
