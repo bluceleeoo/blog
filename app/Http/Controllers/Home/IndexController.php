@@ -10,9 +10,11 @@ class IndexController extends CommonController
 {
     public function index()
     {
-       //点击量最高的6片文章
-        $hot = Article::orderBy('art_view','desc')->take(6)->get();
+       //点击量最高的6片文章(站长推荐区)
+        $pics = Article::orderBy('art_view','desc')->take(6)->get();
         //dd($hot);
+        //点击量最高的6片文章(点击排行区)
+        $hot = Article::orderBy('art_view','desc')->take(5)->get();
         //图文列表（带分页）
         $data= Article::orderBy('art_time','desc')->take(5)->paginate(5);
         //dd($data);
@@ -22,7 +24,7 @@ class IndexController extends CommonController
         $links=Links::orderBy('link_order','asc')->get();
         //dd($links);
         //网站配置项
-        return view('home.index',compact('hot','data','new','links'));
+        return view('home.index',compact('hot','pics','data','new','links'));
     }
 
     public function cate()
