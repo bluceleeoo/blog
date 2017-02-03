@@ -10,7 +10,7 @@
 <form action="#" method="post">
     <div class="result_wrap">
         <div class="result_title">
-            <h3>分类管理</h3>
+            <h3>分类列表</h3>
         </div>
         <!--快捷导航 开始-->
         <div class="result_content">
