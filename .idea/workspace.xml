@@ -2,62 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="321152b3-eff3-432b-9e80-96df8cb83d51" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/1f8aea2172f6eb987c3de3f7ba474eb1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/50.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/5416dd08017075c692766f67049890d4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/5794.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/5817.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/5849.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/5891.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/6167.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/6264.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/aboutphoto.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/ad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/banner_top.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/e5e39b1148811261c78b933805d07232.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/h_line.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/import.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/li.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/logo - 副本.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/ph.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/photos.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/r_line.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/r_title_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/time.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/weather.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/weather_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/weather_bg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/images/weixin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/CommonController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/about.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/book.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/case.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/learn.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/mood.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/new.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/share.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/css/template.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/js/modernizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/js/silder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/list.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/new.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
     </list>
     <ignored path="laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7804878">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.53136533">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2857144">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -112,8 +58,8 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.682927">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.121951">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -122,7 +68,7 @@
       <file leaf-file-name="CommonController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CommonController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.585366">
+            <state vertical-scroll-proportion="0.8292683">
               <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
               <folding>
                 <element signature="e#45#73#0#PHP" expanded="true" />
@@ -183,6 +129,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/category/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" />
       </list>
     </option>
@@ -202,10 +149,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="160" />
-    <option name="y" value="196" />
-    <option name="width" value="997" />
-    <option name="height" value="496" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -499,11 +446,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="160" y="196" width="997" height="496" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23265742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -895,9 +842,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.121951">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CommonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.585366">
+        <state vertical-scroll-proportion="0.8292683">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding>
             <element signature="e#45#73#0#PHP" expanded="true" />
@@ -907,24 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7804878">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.682927">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2857144">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.53136533">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding />
         </state>
       </provider>
