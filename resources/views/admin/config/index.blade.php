@@ -33,7 +33,7 @@
 <form action="#" method="post">
     <div class="result_wrap">
         <div class="result_title">
-            <h3>友情配置列表</h3>
+            <h3>配置列表</h3>
         </div>
         <!--快捷导航 开始-->
         <div class="result_content">
@@ -51,9 +51,9 @@
                 <tr>
                     <th class="tc" width="5%">排序</th>
                     <th class="tc" width="5%">ID</th>
-                    <th>配置名称</th>
-                    <th>配置标题</th>
-                    <th>配置地址</th>
+                    <th>标题</th>
+                    <th>名称</th>
+                    <th></th>
                     <th>操作</th>
                 </tr>
 
@@ -64,13 +64,13 @@
                     </td>
                     <td class="tc">{{$v->conf_id}}</td>
                     <td>
-                        <a href="#">{{$v->conf_name}}</a>
+                        <a href="#">{{$v->conf_title}}</a>
                     </td>
-                    <td>{{$v->conf_title}}</td>
-                    <td>{{$v->conf_url}}</td>
+                    <td>{{$v->conf_name}}</td>
+                    <td></td>
                     <td>
-                        <a href="{{url('admin/links/'.$v->conf_id.'/edit')}}">修改</a>
-                        <a href="javascript:;" onclick="delLinks({{$v->conf_id}})">删除</a>
+                        <a href="{{url('admin/config/'.$v->conf_id.'/edit')}}">修改</a>
+                        <a href="javascript:;" onclick="delConfig({{$v->conf_id}})">删除</a>
                     </td>
                 </tr>
                 @endforeach
@@ -84,7 +84,7 @@
 <script>
     function changeOrder(obj,conf_id){
         var conf_order = $(obj).val();
-        $.post("{{url('admin/links/changeorder')}}",{'_token':'{{csrf_token()}}','conf_id':conf_id,'conf_order':conf_order},function(data){
+        $.post("{{url('admin/config/changeorder')}}",{'_token':'{{csrf_token()}}','conf_id':conf_id,'conf_order':conf_order},function(data){
             if(data.status == 0){
                 layer.msg(data.msg, {icon: 6});
             }else{
