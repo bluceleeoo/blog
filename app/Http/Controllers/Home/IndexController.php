@@ -30,6 +30,8 @@ class IndexController extends CommonController
     {
         //图文列表（带分页）
         $data= Article::where('cate_id',$cate_id)->orderBy('art_time','desc')->take(5)->paginate(4);
+        //查看次数自增
+        Category::where('cate_id',$cate_id)->increment('cate_view');
         //当前分类的子分类
         $submenu=Category::where('cate_pid',$cate_id)->get();
        // dd($submenu);
@@ -43,6 +45,12 @@ class IndexController extends CommonController
     {
         $field=Article::Join('category','article.cate_id','=','category.cate_id')->where('art_id',$art_id)->first();
         //dd($field);
-        return view('home.new',compact('field'));
+        //查看次数自增
+        Article::where('art_id',$art_id)->increment('art_view');
+        $article['pre']=Article::where('art_id','<',$art_id)->orderBy('art_id','desc')->first();
+        $article['next']=Article::where('art_id','>',$art_id)->orderBy('art_id','asc')->first();
+        $data =Article::where('cate_id',$field->cate_id)->orderBy('art_id','desc')->take(6)->get();
+        //dd($data);
+        return view('home.new',compact('field','article','data'));
     }
 }
