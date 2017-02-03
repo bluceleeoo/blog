@@ -15,6 +15,31 @@ class ConfigController extends Controller
     {
         //dd('全部配置列表');
         $data = Config::orderBy('conf_order','asc')->get();
+        foreach($data as $k=>$v){
+            switch($v->field_type){
+                case 'input':
+                $data[$k]->_html = '<input type="text" class="lg" name="conf_content" value="'.$v->conf_content.'">';
+                break;
+                case 'textarea':
+                    $data[$k]->_html = '<textarea type="text" name="conf_content" >'.$v->conf_content.'</textarea>';;
+                    //echo $data->_html;
+                    break;
+                case 'radio':
+                    //echo $v->field_value;
+                    $arr=explode(',',$v->field_value);
+                    //dd($arr);
+                    $str='';
+                    foreach($arr as $m=>$n){
+                        //1\开启
+                        $r=explode('|',$n);
+                        $c=$v->conf_content==$r[0]?' checked ':'';
+                        //dd($r);
+                        $str.= '<input type="radio" name="conf_content" value="'.$r[0].'"'.$c.' >'.$r[1].'　';
+                    }
+                    $data[$k]->_html= $str;
+                    break;
+            }
+        }
         return view('admin.config.index',compact('data'));
     }
 
