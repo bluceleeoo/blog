@@ -57,7 +57,7 @@
                 <td>
                     <input type="radio" name="field_type" value="input" onclick="showTr()" checked >input　
                     <input type="radio" name="field_type" value="textarea" onclick="showTr()" >textarea　
-                    <input type="radio" name="field_type" value="rodio" onclick="showTr()" >radio
+                    <input type="radio" name="field_type" value="radio" onclick="showTr()" >radio
                 </td>
             </tr>
             <tr class="field_value">

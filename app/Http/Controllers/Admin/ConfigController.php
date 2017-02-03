@@ -76,7 +76,7 @@ class ConfigController extends Controller
     public function edit($conf_id)
     {
         $field = Config::find($conf_id);
-        return view('admin.links.edit',compact('field'));
+        return view('admin.config.edit',compact('field'));
     }
 
     //put.admin/config/{links}    更新配置
@@ -85,7 +85,7 @@ class ConfigController extends Controller
         $input = Input::except('_token','_method');
         $re = Config::where('conf_id',$conf_id)->update($input);
         if($re){
-            return redirect('admin/links');
+            return redirect('admin/config');
         }else{
             return back()->with('errors','配置更新失败，请稍后重试！');
         }
