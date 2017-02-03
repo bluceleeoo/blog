@@ -39,8 +39,10 @@ class IndexController extends CommonController
         return view('home.list',compact('field','data','submenu'));
     }
 
-    public function article()
+    public function article($art_id)
     {
-        return view('home.new');
+        $field=Article::Join('category','article.cate_id','=','category.cate_id')->where('art_id',$art_id)->first();
+        //dd($field);
+        return view('home.new',compact('field'));
     }
 }
