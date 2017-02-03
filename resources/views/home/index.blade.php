@@ -56,22 +56,7 @@
             <!-- Baidu Button END -->
             {{--<div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>--}}
             <div class="news" style="float: left;">
-                <h3>
-                    <p>最新<span>文章</span></p>
-                </h3>
-                <ul class="rank">
-                    @foreach($new as $n)
-                    <li><a href="{{url('a/'.$n->art_id)}}" title="{{$n->art_title}}" target="_blank">{{$n->art_title}}</a></li>
-                    @endforeach
-                </ul>
-                <h3 class="ph">
-                    <p>点击<span>排行</span></p>
-                </h3>
-                <ul class="paih">
-                    @foreach($hot as $h)
-                    <li><a href="{{url('a/'.$h->art_id)}}" title="{{$h->art_title}}" target="_blank">{{$h->art_title}}</a></li>
-                    @endforeach
-                </ul>
+                @parent
                 <h3 class="links">
                     <p>友情<span>链接</span></p>
                 </h3>

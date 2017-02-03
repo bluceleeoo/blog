@@ -20,8 +20,24 @@
     </nav>
 </header>
 
-@yield('content')
-
+@section('content')
+    <h3>
+        <p>最新<span>文章</span></p>
+    </h3>
+    <ul class="rank">
+        @foreach($new as $n)
+            <li><a href="{{url('a/'.$n->art_id)}}" title="{{$n->art_title}}" target="_blank">{{$n->art_title}}</a></li>
+        @endforeach
+    </ul>
+    <h3 class="ph">
+        <p>点击<span>排行</span></p>
+    </h3>
+    <ul class="paih">
+        @foreach($hot as $h)
+            <li><a href="{{url('a/'.$h->art_id)}}" title="{{$h->art_title}}" target="_blank">{{$h->art_title}}</a></li>
+        @endforeach
+    </ul>
+@show
 <footer>
     <p>{!! Config::get('web.copyright') !!} {!! Config::get('web.web_count') !!}</p>
 </footer>
