@@ -112,11 +112,11 @@
     }
 
     //删除友情配置
-    function delLinks(conf_id) {
+    function delConfig(conf_id) {
         layer.confirm('您确定要删除这个配置吗？', {
             btn: ['确定','取消'] //按钮
         }, function(){
-            $.post("{{url('admin/links/')}}/"+conf_id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
+            $.post("{{url('admin/config/')}}/"+conf_id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
                 if(data.status==0){
                     location.href = location.href;
                     layer.msg(data.msg, {icon: 6});

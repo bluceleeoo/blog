@@ -51,7 +51,20 @@ class ConfigController extends Controller
         foreach($input['conf_id'] as $k=>$v){
             Config::where('conf_id',$v)->update(['conf_content'=>$input['conf_content'][$k]]);
         }
+        $this->putFile();
         return back()->with('errors','配置更新成功！');
+    }
+
+    public function putFile()
+    {
+        //获取配置项的值
+        //echo \Illuminate\Support\Facades\Config::get('web.web_title');
+        $config = Config::pluck('conf_content','conf_name')->all();
+         //数组转换成字符串
+        $path=base_path().'\config\web.php';
+        $str='<?php return '.var_export($config,true).';';
+        file_put_contents($path,$str);
+        //dd($path);
     }
 
     public function changeOrder()
@@ -121,6 +134,7 @@ class ConfigController extends Controller
         $input = Input::except('_token','_method');
         $re = Config::where('conf_id',$conf_id)->update($input);
         if($re){
+            $this->putFile();
             return redirect('admin/config');
         }else{
             return back()->with('errors','配置更新失败，请稍后重试！');
@@ -132,6 +146,7 @@ class ConfigController extends Controller
     {
         $re = Config::where('conf_id',$conf_id)->delete();
         if($re){
+            $this->putFile();
             $data = [
                 'status' => 0,
                 'msg' => '配置删除成功！',
